@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang="de" data-ng-app="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+
+    <title></title>
+    <meta name="description" content="Einfache/s Tutorial/Demo f&uuml;r Angular.js">
+    <meta name="keywords" content="Angular, tutorial, demo">
+    <meta name="robots" content="index, follow">
+</head>
+
+<body>
+    <h1>Einfache/s Tutorial/Demo f&uuml;r Angular.js</h1>
+
+    <p>Einfachen Controller hinzugef&uuml;gt.</p>
+
+  <div class="container" data-ng-controller="SimpleController">
+    <p>Filter: <input type="text" data-ng-model="name"> Sie haben "<b>{{nameText}}</b>" getippt.</p>
+
+    <ul>
+        <li data-ng-repeat="alien in lifeforms  | filter:name | orderBy:'planet'">{{ alien.name }}<br>
+        <em>{{ alien.planet | uppercase }}</em></li>
+    </ul>
+  </div>
+    
+  <script src="js/angular.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    function SimpleController($scope) {
+            $scope.lifeforms = [
+            {name : 'Alf', planet : 'Melmac'},
+            {name : 'Kal El', planet : 'Krypton'},
+            {name : 'Spock', planet : 'Vulcan'}, 
+            {name : 'Barbarella', planet : 'Venus'}, 
+            {name : 'Cookie Monster', planet : 'Crumbleworld'} ]
+        };
+    </script>
+</body>
+</html>

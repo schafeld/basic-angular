@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de" data-ng-app="">
+    <head>  
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title></title>
+        <meta name="description" content="Einfache/s Tutorial/Demo f&uuml;r Angular.js" />     
+        <meta name="keywords" content="Angular, tutorial, demo" />
+        <meta name="robots" content="index, follow" />
+    </head>
+    <body>
+	<header>
+		<h1>Einfache/s Tutorial/Demo f&uuml;r Angular.js</h1>
+	</header>
+	<!-- 
+	<nav>
+		<ul>
+		  <li><a href="#" class="selected">Seite 1</a></li>
+		  <li><a href="#">Seite 2</a></li>
+		  <li><a href="#">Seite 3</a></li>
+        </ul>
+	</nav>
+	-->
+	
+	<div class="container" data-ng-init="lifeforms = [{name : 'Alf', planet : 'Melmac'},{name : 'Kal El', planet : 'Krypton'},{name : 'Spock', planet : 'Vulcan'}, {name : 'Barbarella', planet : 'Venus'}, {name : 'Cookie Monster', planet : 'Crumbleworld'} ]">
+
+	<p>
+		Filter: <input type="text" data-ng-model="nameText"/> Sie haben "<b>{{nameText}}</b>" getippt.
+	</p>
+
+	<ul>
+	  <li data-ng-repeat="alien in lifeforms  | filter:nameText | orderBy:'planet'">{{ alien.name }} <br/><em> {{ alien.planet | uppercase }} </em></li>
+	</ul>
+
+	</div>
+	
+	<!--
+	<section>
+		Main content area
+	</section>
+	-->
+	
+	<!-- 
+	<aside>
+		Sidebar
+	</aside>
+	-->
+	<!-- 
+	<footer>
+		Footer
+	</footer>
+	-->
+	
+	<script src="js/angular.min.js"></script>
+    </body>
+</html>
