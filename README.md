@@ -1,4 +1,6 @@
-basic-angular
-=============
+##Made by: 
+Oliver Schafeld (@nexxos_de)
 
-Basic Angular.js techniques demonstrated.
+##Inspired by: 
+http://fastandfluid.com/publicdownloads/AngularJSIn60MinutesIsh_DanWahlin_May2013.pdf 
+http://www.youtube.com/watch?v=i9MHigUZKEM 
